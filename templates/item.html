@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
     <script>
-        function clickButton(){
-            site_id = {{ id }};
+        function test() {
+            site_id = {{id}};
             temp = document.getElementById("test").value;
             document.getElementById("test").value = site_id;
             setTimeout(() => { document.getElementById("test").value = temp;}, 3000);
-
-        }
+}
     </script>
-    <title>Item Details</title>
-    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="id_txt">
@@ -19,7 +18,7 @@
     </div>
 
     <from method="post">
-        <input type="button" onclick="clickButton()" class="button_text" id="test" value="Plus One"/>
+        <input type="button" onclick="test()" class="button_text" id="test" value="Plus One"/>
     </from>
 
 
